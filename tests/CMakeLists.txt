@@ -1,0 +1,9 @@
+add_executable(archnet_url_tests url_tests.cpp)
+target_link_libraries(archnet_url_tests PRIVATE arch_network)
+target_include_directories(archnet_url_tests PRIVATE support)
+add_test(NAME archnet_url_tests COMMAND archnet_url_tests)
+
+add_executable(archnet_http_message_tests http_message_tests.cpp)
+target_link_libraries(archnet_http_message_tests PRIVATE arch_network)
+target_include_directories(archnet_http_message_tests PRIVATE support)
+add_test(NAME archnet_http_message_tests COMMAND archnet_http_message_tests)
