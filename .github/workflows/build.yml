@@ -15,6 +15,6 @@ jobs:
       - name: Configure
         run: cmake -B build -S .
       - name: Build
-        run: cmake --build build
+        run: cmake --build build --config Debug
       - name: Test
-        run: ctest --test-dir build --output-on-failure
+        run: ctest --test-dir build --output-on-failure -C Debug
